@@ -19,6 +19,16 @@
     "noEmit": true,
     "jsx": "react"
   },
+  "exclude": [
+    "functions",
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-test",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
+  ],
   "include": [
     "src"
   ]
