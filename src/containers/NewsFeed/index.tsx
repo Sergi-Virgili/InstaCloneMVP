@@ -6,7 +6,7 @@ export default class NewsFeed extends React.Component {
     public render() {
         return (
             <Container>
-                <div style={{ margin: "0 auto" }}>
+                <div style={{ margin: "0 auto", boxSizing: 'border-box' }}>
 
                     <Post image={'http://placekitten.com/300/200'} />
                     <Post image={'http://placekitten.com/300/200'} />
