@@ -1,21 +1,25 @@
 import React from "react";
 
-const style = {
+const style = (center: boolean) => ({
     boxSizing: 'border-box',
     backgroundColor: "#eee",
     padding: "10px 15px",
     height: 'calc(100vh)',
     width: 'calc(100vw)',
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-} as React.CSSProperties;
+    justifyContent: center ? 'center' : undefined,
+    alignItems: center ? 'center' : undefined,
+}) as React.CSSProperties;
 
-export default class Contrainer extends React.Component {
+interface IContainerProps {
+    center?: boolean
+}
+
+export default class Contrainer extends React.Component<IContainerProps> {
     public render() {
-        const { children } = this.props;
+        const { children, center = false } = this.props;
         return (
-            <div style={style}>
+            <div style={style(center)}>
                 {children}
             </div>
         );

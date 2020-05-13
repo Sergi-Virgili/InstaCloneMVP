@@ -10,7 +10,7 @@ import Center from '../../components/Center';
 export default class Register extends React.Component {
     public render() {
         return (
-            <Container>
+            <Container center={true}>
                 <Card>
                     <Title>Register</Title>
                     <Input placeholder={'email'} label={'email'} />

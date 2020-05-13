@@ -11,7 +11,7 @@ import Center from '../../components/Center';
 export default class Login extends React.Component {
     public render() {
         return (
-            <Container>
+            <Container center={true}>
                 <Card>
                     <Title>Login</Title>
                     <Input placeholder={'email'} label={'email'} />
