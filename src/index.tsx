@@ -1,18 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router } from 'react-router';
+import createHistory from 'history/createBrowserHistory'
+import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { Router } from 'react-router';
-import createHistory from 'history/createBrowserHistory'
+import * as reducers from './ducks';
+
 
 const history = createHistory();
+const store = createStore(combineReducers({ ...reducers }));
+
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={history}>
-
-      <App />
-    </Router>
+    <Provider store={store}>
+      <Router history={history}>
+        <App />
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

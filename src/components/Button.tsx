@@ -5,7 +5,7 @@ const style = (block: boolean) => ({
     borderRadius: '4px',
     padding: "10px 15px",
     color: 'white',
-    width: block ? '100%' : undefined,
+    width: block ? '100%' : '100px',
     marginBottom: '10px'
 }) as React.CSSProperties;
 
